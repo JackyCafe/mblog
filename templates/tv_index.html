@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <!-- Latest compiled JavaScript -->
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+     <nav class="navbar navbar-default">
+             <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">現正撥出{{ tv.name }}</a>
+                </div>
+
+
+             <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="{% url 'tv_url' 0 %}">三數取大的</a></li>
+                    <li><a href="{% url 'tv_url' 1 %}">GPA</a></li>
+                    <li><a href="{% url 'tv_url' 2 %}">閏年問題</a></li>
+                    <li><a href="{% url 'tv_url' 3 %}">零錢解法</a></li>
+             </ul>
+  </div>
+</nav>
+     <div class="container">
+         <div id = 'tvcode' align="center">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ tv.tvcode }}"
+                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+         </div>
+
+     </div>
+</body>
+</html>
